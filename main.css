@@ -1,0 +1,489 @@
+:root {
+    --font:  'Poppins', sans-serif;
+    --blue: #002952;
+    --light-blue:  #336B91;
+    --green: #ECF5F4;
+    --gold: #C38C1F;
+    --blue-highlight: #10355a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  'Poppins', sans-serif;
+    text-decoration: none;
+    color: var(--green);
+}
+
+body {
+    background-color: var(--blue);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    height: 60px;
+}
+
+/* Responseble for aliging the content of the site */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 12px; 
+}
+
+header img {
+    height: 40px;
+}
+
+.container div {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+}
+.menu {
+    display: flex;
+}
+
+.menu li,
+.social li,
+.logo-techs li {
+    list-style: none;
+    padding: 0px 20px;
+}
+
+.menu a {
+    font-size: 0.875rem; /* 14px */
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 22.4px */
+    letter-spacing: 1px;
+    text-transform: uppercase;    
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 31.55px 14.59px 32px;
+    align-self: stretch;
+    border-radius: 40px;
+    border: 2px solid var(--light-blue);
+    background: var(--light-blue);
+    font-size: 1rem; /* 16px */
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 25.6px*/
+    text-transform: uppercase;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 55px;
+    gap: 96px;
+}
+
+#home img{
+    height: 636px;
+    width: 677.19px;
+    border-radius: 30px;
+}
+
+#home .container {
+    gap: 12px;
+}
+
+.network {
+    gap: 24px;
+}
+
+.fa-arrow-right {
+    margin-left: 10px;
+}
+
+.container .me {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/*Esse bloco de códo e para melhorar a ux em dispositivos mobile*/
+/* #home .container {
+
+} */
+
+.span-highlight {
+    display: block;
+    background: var(--light-blue);
+    margin-bottom: 15px;
+    padding: 0 12px;
+    font-size: 1rem; /* 16px*/    
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 20px */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.title,
+h1 {
+    font-size: 2.7rem; /* 70px */
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 84px*/
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.text-blue {
+    color: var(--gold)
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+.me p {
+    font-size: 1.25rem; /* 20px*/
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 30px*/
+    letter-spacing: 0.2px;  
+    margin-bottom: 16px;  
+}
+
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social li {
+    padding: 0px;
+}
+.social a{
+    padding: 15px 17.98px;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 50%;
+    border: 2px solid var(--green);   
+}
+
+.social i{
+    height: 16px;
+    color: var(--green)
+}
+
+.icon-linkedin a {
+    background-color: #2955bb;
+}
+
+.icon-github a {
+    background-color: #000;
+}
+
+.icon-instagram a {
+    background: radial-gradient(circle at 30% 107%, #ffd600 0%, #ff7a00 5%, #ff0069 45%, #d300c5 60%, #7838fa 90%);
+}
+
+.technologys {
+    /* O overflow hidden foi usado para não quebrar o layout */
+    overflow-x: hidden;
+    padding: 24px 0px;
+    align-items: center;
+}
+
+.background-highlight {
+    background-color: var(--blue-highlight);
+}
+
+.logo-techs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-techs img {
+    height: 115PX;
+    width: 135px;
+}
+
+#about-me .container {
+    padding: 48px 110px 0px 110px;
+}
+
+#about-me img {
+    width: 526px;
+    height: 644.55px;
+    max-width: 526px;
+    border-radius: 30px;
+}
+
+.my-information {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    width: 550px;
+    padding: 48px 48px 0px 48px;
+
+}
+
+.title-size-m,
+h2 {
+    display: block;
+    font-size: 2.5rem; /* 40px */
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 48px */
+    text-transform: uppercase;
+}
+
+.my-information h2 {
+    margin-bottom: 26px;
+}
+
+#projects{
+    padding: 100px 0px 116px 0px;
+    overflow-x: hidden;
+}
+
+#projects .container {
+    flex-direction: column;
+    align-items: baseline;
+}
+
+#projects h2 {
+    margin-bottom: 45px;
+}
+
+.information-projects div {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 392px;
+    padding: 14px;
+    align-self: stretch;
+    border-radius: 10px;
+    background-color: var(--green);
+    position: relative;
+    margin-right: 24px;
+}
+
+.information-projects img {
+    width: 364px;
+    height: 273px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.information-projects h3 {
+    color: #111111;
+    font-size: 1.25rem; /* 20px*/
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 24px */
+    margin-bottom: 7px;
+}
+
+.information-projects span {
+    color: #404040;
+    font-size: 0.875rem; /* 14px */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 22.4px */
+}
+
+.information-projects a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin: 5px;
+    bottom: 14px;
+    right: 14px;
+    height: 45px;
+    width: 45px;
+    border-radius: 22.5px;
+    background-color: var(--light-blue);
+    border: 2px solid #111111;
+}
+
+.information-projects i {
+    margin: 0px;
+}
+
+#contact {
+    position: relative;
+    margin: 100px 0px;
+    padding: 48px 0px;
+} 
+
+#contact .container {
+    flex-direction: column;
+}
+
+#contact .subject{
+    display: block;
+    width: 100%;
+    background-color: #052646;
+    flex-direction: column;
+    padding: 48px 48px 47.4px 447px;
+}
+
+.subject h2{
+    font-size: 2.5rem; /* 40px */
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 48px */
+    margin-bottom: 8px;
+    max-width: 798.66px
+}
+
+.subject p {
+    font-size: 1.0625rem; /* 17px */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 27px */
+    max-width: 550px;
+}
+
+#contact .my-contact {
+    flex-direction: column;
+    align-items: baseline;
+    position: absolute;
+    top: 78px;
+    margin-right: 1030px;
+
+}
+
+.my-contact img {
+    width: 351.33px;
+    height: 351.33px;
+    max-width: 351.33px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
+
+
+#contact .contacts{
+    margin: 20px 0px 40px 100px;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.text-size-s,
+label {
+    font-size: 1.0625rem; /* 12px */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 19.2px */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.text-size-b {
+    font-size: 1.375rem; /* 22px */
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 35.2px */
+}
+
+#contact .form {
+    width: 100%;
+    background-color: var(--blue-highlight);
+    padding: 48px 48px 48px 447px;
+}
+
+#contact form {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#contact .dis-block {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 8px;
+
+}
+
+form [type="text"],
+form [type="email"]  {
+    color: var(--green);
+    font-size: 1rem; /* 16px */
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+input,
+textarea {
+    background-color: #0a3c6e95;
+    border: 1px solid var(--light-blue);
+    border-radius: 6px;
+    padding: 12px 13px;
+}
+
+label {
+    letter-spacing: 1px;
+}
+
+#name, 
+#email {
+    width: 375.39px;
+}
+
+#subject, 
+#menssage,
+form button,
+textarea { 
+    width: 767px;
+}
+
+form button {
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+    height: 117px;
+}
+
+#name:focus,
+#email:focus,
+#subject:focus,
+#message:focus,
+textarea:focus {
+    outline: var(--blue);
+    border: 2px solid var(--green)
+}
+
+.highlight-input {
+    display: flex;
+}
+
+::-webkit-input-placeholder {
+    color: #c8cbcb;
+}
+
+:focus::-webkit-input-placeholder {
+    opacity: .5;
+}
+
+footer .container{
+    align-items: center;
+    justify-content: center;
+    padding: 20px 12px;
+}
+
+footer  {
+    border-top: 1px solid var(--light-blue);
+}
