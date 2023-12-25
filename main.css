@@ -35,7 +35,7 @@ header {
     max-width: 1320px;
     width: 100%;
     margin: 0 auto;
-    padding: 30px 12px;
+    padding: 12px 30px;
     flex-wrap: wrap;
     width: 100%
 }
@@ -49,8 +49,14 @@ header img {
     align-items: center;
     padding-top: 15px;
 }
+
+#menu-togglo{
+    display: none;
+}
+
 .menu {
     display: flex;
+    align-items: center;
 }
 
 .menu li,
@@ -94,7 +100,7 @@ main {
 
 #home img{
     height: 636px;
-    width: 677.19px;
+    width: 645.19px;
     border-radius: 30px;
 }
 
@@ -327,6 +333,7 @@ h2 {
     position: relative;
     margin: 100px 0px;
     padding: 48px 0px;
+    flex-wrap: wrap;
 } 
 
 #contact .container {
@@ -344,7 +351,7 @@ h2 {
 .subject h2{
     font-size: 2.5rem; /* 40px */
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 120%; /* 48px */
     margin-bottom: 8px;
     max-width: 798.66px
@@ -357,24 +364,6 @@ h2 {
     line-height: 160%; /* 27px */
     max-width: 550px;
 }
-
-#contact .my-contact {
-    flex-direction: column;
-    align-items: baseline;
-    position: absolute;
-    top: 78px;
-    margin-right: 1030px;
-
-}
-
-.my-contact img {
-    width: 351.33px;
-    height: 351.33px;
-    max-width: 351.33px;
-    margin-bottom: 20px;
-    border-radius: 30px;
-}
-
 
 #contact .contacts{
     margin: 20px 0px 40px 100px;
@@ -405,13 +394,19 @@ label {
     padding: 48px 48px 48px 447px;
 }
 
+#contact .subject,
+#contact .form {
+    max-width: 1294px;
+    width: 100%;
+}
+
 #form-contact {
     display: flex;
     flex-wrap: wrap;
     row-gap: 24px;
     align-items: center;
     flex-direction: column;
-
+    
 }
 
 #contact .dis-block {
@@ -484,6 +479,23 @@ textarea:focus {
     opacity: .5;
 }
 
+#contact .my-contact {
+    flex-direction: column;
+    align-items: baseline;
+    position: absolute;
+    top: 78px;
+    margin-right: 1030px;
+    
+}
+
+.my-contact img {
+    width: 351.33px;
+    height: 351.33px;
+    max-width: 351.33px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
+
 footer .container{
     align-items: center;
     justify-content: center;
@@ -492,4 +504,136 @@ footer .container{
 
 footer  {
     border-top: 1px solid var(--light-blue);
+}
+
+/*viewing tablet*/
+
+@media (max-width: 960px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    header {
+        margin: 0;
+        padding: 40px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #menu-togglo {
+        display: block;
+        background: transparent;
+        border: none;
+        padding: 10px;
+    }
+
+    nav,
+    .container a .responsive {
+        display: none;
+    } 
+    
+    main {
+        margin-top: 30px;
+    }
+
+    #home span,
+    h1,
+    .my-information span, h2 {
+        font-size: 1.8rem;
+    }
+
+    #home p,
+    .my-information p {
+        font-size: 1rem;
+    }
+
+    #home img,
+    #about-me img {
+        max-height: 350px;
+    }
+
+    #home img,
+    #about-me .my-information {
+        margin-top: 20px;
+    }
+
+    .network {
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 32px;
+    }
+    
+    .network .social {
+        align-items: flex-start;
+        margin-left: -70px;
+    }
+    
+    #about-me .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+    }
+    
+    .my-information {
+        padding: 0px;
+    }
+    
+    #about-me img {
+        max-width: 320px;
+    }
+    
+    #projects .container {
+        padding: 10px
+    }
+
+    #contact .container {
+        display: block;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    
+    #contact .subject, 
+    #contact .form{
+        padding: 20px;
+    }
+    
+    #form-contact {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #form-contact .highlight-input {
+        display: block;
+    }
+    
+    #form-contact label {
+        text-align: right;
+    }
+
+    #full-name,
+    #email,
+    #subject,
+    #massage,
+    #form-contact .button {
+        width: 90vw;
+    }
+    
+    .my-contact img  {
+        display: none;
+    }
+    
+    #contact .my-contact {
+        position: static;
+        padding: 20px 20px 40px 20px;
+        background-color: var(--blue-highlight);
+        width: 100%;
+        height: auto;
+    }  
+
+    #contact .contacts {
+        margin-left: 0px;
+    }
 }
