@@ -122,10 +122,6 @@ main {
     align-items: flex-start;
 }
 
-/*Esse bloco de códo e para melhorar a ux em dispositivos mobile*/
-/* #home .container {
-
-} */
 .me {
     max-width: 590px;
     margin-right: 12px;
@@ -504,12 +500,14 @@ footer  {
 }
 
 @media (max-width: 960px) {
+
     .container {
         padding: 0 20px;
+        width: 100vw;
     }
 
     header {
-        margin: 0;
+        margin: 0px;
         padding: 40px 0px;
         display: flex;
         justify-content: space-between;
@@ -554,7 +552,8 @@ footer  {
 
     #home img,
     #about-me img {
-        max-height: 350px;
+        max-height: 80vh;
+        max-width: 90vw;
     }
 
     #home img,
@@ -584,8 +583,8 @@ footer  {
         padding: 0px;
     }
     
-    #about-me img {
-        max-width: 320px;
+    {
+        max-width: 90vw;
     }
     
     #projects .container {
@@ -601,7 +600,7 @@ footer  {
     
     #contact .subject, 
     #contact .form{
-        padding: 20px;
+        padding: 9px;
     }
     
     #form-contact {
@@ -614,7 +613,11 @@ footer  {
     }
     
     #form-contact label {
-        text-align: right;
+        text-align: left;
+    }
+
+    #full-name {
+        margin-bottom: 20px;
     }
 
     #full-name,
