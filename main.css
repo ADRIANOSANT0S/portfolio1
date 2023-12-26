@@ -30,7 +30,7 @@ header {
 /* Responseble for aliging the content of the site */
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     max-width: 1320px;
     width: 100%;
@@ -40,7 +40,14 @@ header {
     width: 100%
 }
 
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 header img {
+    
     height: 40px;
 }
 
@@ -488,8 +495,149 @@ footer .container{
     align-items: center;
     justify-content: center;
     padding: 20px 12px;
+    top: 0px;
+    position:sticky
 }
 
 footer  {
     border-top: 1px solid var(--light-blue);
+}
+
+@media (max-width: 960px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    header {
+        margin: 0;
+        padding: 40px 0px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: none;
+        align-items: center;
+    }
+
+    header {
+        top: 0px;
+        z-index: 1;
+        position: sticky;
+        background: rgb(4,34,62);
+        background: linear-gradient(180deg, rgba(4,34,62,1) 18%, rgba(0,41,84,1) 66%, rgba(2,41,83,1) 88%, rgba(0,41,82,1) 100%);
+    }
+
+    #menu-togglo {
+        display: block;
+        background: transparent;
+        border: none;
+        padding: 10px;
+    }
+
+    nav,
+    header .button {
+        display: none;
+    } 
+    
+    main {
+        margin-top: 30px;
+    }
+
+    #home span,
+    h1,
+    .my-information span, h2 {
+        font-size: 1.8rem;
+    }
+
+    #home p,
+    .my-information p {
+        font-size: 1rem;
+    }
+
+    #home img,
+    #about-me img {
+        max-height: 350px;
+    }
+
+    #home img,
+    #about-me .my-information {
+        margin-top: 20px;
+    }
+
+    .network {
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 32px;
+    }
+    
+    .network .social {
+        align-items: flex-start;
+        margin-left: -70px;
+    }
+    
+    #about-me .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+    }
+    
+    .my-information {
+        padding: 0px;
+    }
+    
+    #about-me img {
+        max-width: 320px;
+    }
+    
+    #projects .container {
+        padding: 10px
+    }
+
+    #contact .container {
+        display: block;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    
+    #contact .subject, 
+    #contact .form{
+        padding: 20px;
+    }
+    
+    #form-contact {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #form-contact .highlight-input {
+        display: block;
+    }
+    
+    #form-contact label {
+        text-align: right;
+    }
+
+    #full-name,
+    #email,
+    #subject,
+    #massage,
+    #form-contact .button {
+        width: 90vw;
+    }
+    
+    .my-contact img  {
+        display: none;
+    }
+    
+    #contact .my-contact {
+        position: static;
+        padding: 20px 20px 40px 20px;
+        background-color: var(--blue-highlight);
+        width: 100%;
+        height: auto;
+    }  
+
+    #contact .contacts {
+        margin-left: 0px;
+    }
 }
