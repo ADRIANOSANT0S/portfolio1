@@ -30,7 +30,7 @@ header {
 /* Responseble for aliging the content of the site */
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     max-width: 1320px;
     width: 100%;
@@ -40,7 +40,14 @@ header {
     width: 100%
 }
 
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 header img {
+    
     height: 40px;
 }
 
@@ -121,10 +128,6 @@ main {
     align-items: flex-start;
 }
 
-/*Esse bloco de códo e para melhorar a ux em dispositivos mobile*/
-/* #home .container {
-
-} */
 .me {
     max-width: 590px;
     margin-right: 12px;
@@ -500,6 +503,8 @@ footer .container{
     align-items: center;
     justify-content: center;
     padding: 20px 12px;
+    top: 0px;
+    position:sticky
 }
 
 footer  {
@@ -529,7 +534,7 @@ footer  {
     }
 
     nav,
-    .container a .responsive {
+    header .button {
         display: none;
     } 
     
@@ -550,7 +555,8 @@ footer  {
 
     #home img,
     #about-me img {
-        max-height: 350px;
+        max-height: 450px;
+        max-width: 90vw;
     }
 
     #home img,
@@ -580,12 +586,16 @@ footer  {
         padding: 0px;
     }
     
-    #about-me img {
-        max-width: 320px;
-    }
-    
     #projects .container {
-        padding: 10px
+        padding: 0 5px;
+    }
+
+    .information-projects img {
+        max-width: 88vw;
+    }
+
+    .information-projects div {
+        width: 25%;
     }
 
     #contact .container {
@@ -597,20 +607,33 @@ footer  {
     
     #contact .subject, 
     #contact .form{
-        padding: 20px;
+        padding: 15px;
+        column-gap: 0px;
     }
     
+    #contact .form {
+        padding-right: 0px;
+    }
+
     #form-contact {
         display: flex;
         flex-direction: column;
     }
     
+    #contact .dis-block {
+        margin: 0px;
+    }
+
     #form-contact .highlight-input {
         display: block;
     }
     
     #form-contact label {
-        text-align: right;
+        text-align: left;
+    }
+
+    #full-name {
+        margin-bottom: 20px;
     }
 
     #full-name,
@@ -618,7 +641,7 @@ footer  {
     #subject,
     #massage,
     #form-contact .button {
-        width: 90vw;
+        max-width: 90vw;
     }
     
     .my-contact img  {
