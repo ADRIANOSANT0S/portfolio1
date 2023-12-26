@@ -526,6 +526,14 @@ footer  {
         align-items: center;
     }
 
+    header {
+        top: 0px;
+        position: sticky;
+        z-index: 1;
+        background: rgb(4,34,62);
+        background: linear-gradient(180deg, rgba(4,34,62,1) 18%, rgba(0,41,84,1) 66%, rgba(2,41,83,1) 88%, rgba(0,41,82,1) 100%);
+    }
+
     #menu-togglo {
         display: block;
         background: transparent;
@@ -608,14 +616,15 @@ footer  {
     #contact .subject, 
     #contact .form{
         padding: 15px;
-        column-gap: 0px;
     }
     
     #contact .form {
-        padding-right: 0px;
+        display: flex;
+        justify-content: center;
     }
 
     #form-contact {
+        position: relative;
         display: flex;
         flex-direction: column;
     }
@@ -626,24 +635,30 @@ footer  {
 
     #form-contact .highlight-input {
         display: block;
+        width: 89vw;
     }
     
+    #full-name,
+    #email {
+        width: 100%;
+    }
+
     #form-contact label {
-        text-align: left;
+        width: 100%;
+        margin-bottom: 8px;
     }
 
     #full-name {
         margin-bottom: 20px;
     }
 
-    #full-name,
-    #email,
+    .highlight-input,
     #subject,
     #massage,
     #form-contact .button {
         max-width: 90vw;
     }
-    
+
     .my-contact img  {
         display: none;
     }
