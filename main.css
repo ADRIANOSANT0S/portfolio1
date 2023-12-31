@@ -3,7 +3,7 @@
     --blue: #002952;
     --light-blue:  #336B91;
     --green: #ECF5F4;
-    --gold: #C38C1F;
+    --brownish-yellow: #C38C1F;
     --blue-highlight: #10355a;
 }
 
@@ -23,8 +23,12 @@ body {
 header {
     display: flex;
     align-items: center;
-    margin: 20px;
+    position: sticky;
+    padding: 40px 0;
     height: 60px;
+    top: 0px;
+    z-index: 100;
+    background: linear-gradient(180deg, rgb(4, 29, 52) 18%, rgb(2, 33, 65) 66%, rgb(1, 35, 72) 88%, rgb(1, 39, 77) 100%);
 }
 
 /* Responseble for aliging the content of the site */
@@ -37,7 +41,7 @@ header {
     margin: 0 auto;
     padding: 12px 30px;
     flex-wrap: wrap;
-    width: 100%
+    width: 100%;
 }
 
 header .container{
@@ -47,14 +51,13 @@ header .container{
 }
 
 header img {
-    
-    height: 40px;
+    height: 50px;
 }
 
+header div, 
 .container div {
     display: flex;
     align-items: center;
-    padding-top: 15px;
 }
 
 #menu-togglo{
@@ -82,6 +85,10 @@ header img {
     text-transform: uppercase;    
 }
 
+nav a:hover {
+    color: var(--brownish-yellow);
+}
+
 .button {
     display: flex;
     justify-content: center;
@@ -96,6 +103,12 @@ header img {
     font-weight: 500;
     line-height: 160%; /* 25.6px*/
     text-transform: uppercase;
+    cursor: pointer;
+}
+
+#home a:hover,
+a:hover .fa-arrow-right {
+    color: var(--brownish-yellow);
 }
 
 main {
@@ -156,8 +169,8 @@ h1 {
     margin-bottom: 8px;
 }
 
-.text-blue {
-    color: var(--gold)
+.text-brownish-yellow {
+    color: var(--brownish-yellow);
 }
 
 h1 {
@@ -181,8 +194,9 @@ h1 {
 }
 
 .social li {
-    padding: 0px;
+    padding: 10px 0;
 }
+
 .social a{
     padding: 12px 16px;
     align-items: center;
@@ -191,9 +205,9 @@ h1 {
     border: 2px solid var(--green);   
 }
 
+/* height: 16px; */
 .social i{
-    /* height: 16px; */
-    color: var(--green)
+    color: var(--green);
 }
 
 .icon-linkedin a {
@@ -208,8 +222,8 @@ h1 {
     background: radial-gradient(circle at 30% 107%, #ffd600 0%, #ff7a00 5%, #ff0069 45%, #d300c5 60%, #7838fa 90%);
 }
 
+/* O overflow hidden foi usado para não quebrar o layout */
 .technologys {
-    /* O overflow hidden foi usado para não quebrar o layout */
     overflow-x: hidden;
     padding: 24px 0px;
     align-items: center;
@@ -246,7 +260,6 @@ h1 {
     align-items: baseline;
     width: 550px;
     padding: 48px 48px 0px 48px;
-
 }
 
 .title-size-m,
@@ -335,6 +348,101 @@ h2 {
     margin: 0px;
 }
 
+#service .container{
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+}
+
+#service h2 {
+    margin-bottom: 45px;
+}
+
+.available-services {
+    overflow-x: hidden;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.available-services > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    width: 306px;
+    height: 396px;
+    gap: 10px;
+}
+
+.dev-web,
+.self-handling,
+.m-update,
+.int-databases,
+.api {
+    background-size: 100% 100%;
+    padding: 20px;
+}
+
+.dev-web::after,
+.self-handling::after,
+.m-update::after,
+.int-databases::after,
+.api::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(4, 12, 22, 0.00) 0%, #040C16 100%);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.dev-web{
+    background-image: url("imgs/dev-web.jpg");
+}
+
+.self-handling {
+    background-image: url("imgs/automação.jpg");
+}
+
+.m-update {
+    background-image: url("imgs/upDate.jpg");
+}
+
+.int-databases {
+    background-image: url("imgs/baseDate.jpg");
+}
+
+.api {
+    background-image: url("imgs/api.jpg");
+}
+
+.available-services h3 {
+    width: 100%;
+    margin-bottom: 7px;
+    font-size: 1.25rem; /* 20px */
+    font-style: normal;
+    font-weight: bold;
+    line-height: 120%; /* 24px */
+}
+
+.available-services p {
+    font-size: 0.875rem; /* 14px */
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 19.6px */
+}
+
+.available-services h3,
+.available-services p {
+    z-index: 2;
+}
+
 #contact {
     position: relative;
     margin: 100px 0px;
@@ -360,7 +468,7 @@ h2 {
     font-weight: 700;
     line-height: 120%; /* 48px */
     margin-bottom: 8px;
-    max-width: 798.66px
+    max-width: 798.66px;
 }
 
 .subject p {
@@ -412,14 +520,12 @@ label {
     row-gap: 24px;
     align-items: center;
     flex-direction: column;
-    
 }
 
 #contact .dis-block {
     display: flex;
     flex-direction: column;
     margin: 0px 8px;
-
 }
 
 #form [type="text"],
@@ -470,7 +576,7 @@ textarea {
 #message:focus,
 textarea:focus {
     outline: var(--blue);
-    border: 2px solid var(--green)
+    border: 2px solid var(--green);
 }
 
 .highlight-input {
@@ -482,7 +588,7 @@ textarea:focus {
 }
 
 :focus::-webkit-input-placeholder {
-    opacity: .5;
+    opacity: 0.5;
 }
 
 #contact .my-contact {
@@ -503,21 +609,40 @@ textarea:focus {
 }
 
 footer .container{
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px 12px;
     top: 0px;
-    position:sticky
 }
 
 footer  {
     border-top: 1px solid var(--light-blue);
 }
 
-/*viewing tablet*/
+footer a {
+    text-decoration: underline;
+}
+
+.text-small {
+    font-size: 9px;
+}
+
+/*viewing divece movel*/
+@media (max-width: 600px) {
+    .information-projects div {
+        width: 90vw;
+    } 
+
+    .available-services div {
+        width: 100%;
+    }
+
+}
 
 @media (max-width: 960px) {
     .container {
+        width: 100%;
         padding: 0 15px;
     }
 
@@ -527,14 +652,6 @@ footer  {
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-
-    header {
-        top: 0px;
-        position: sticky;
-        z-index: 1;
-        background: rgb(4,34,62);
-        background: linear-gradient(180deg, rgba(4,34,62,1) 18%, rgba(0,41,84,1) 66%, rgba(2,41,83,1) 88%, rgba(0,41,82,1) 100%);
     }
 
     #menu-togglo {
@@ -590,23 +707,28 @@ footer  {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0 20px;
+        padding: 0 10px;
     }
     
     .my-information {
         padding: 0px;
     }
     
-    #projects .container {
+    /* #projects .container {
         padding: 0 10px;
+    } */
+
+    #projects .container {
+        padding: 0 15px;
     }
 
     .information-projects img {
-        max-width: 100%;
+        width: 100%;
     }
 
-    .information-projects div {
-        max-width: 95vw;
+    .available-services {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     #contact .container {
@@ -615,7 +737,6 @@ footer  {
         padding: 0px;
     }
 
-    
     #contact .subject, 
     #contact .form{
         padding: 15px;
