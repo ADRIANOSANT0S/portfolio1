@@ -1,4 +1,4 @@
-// Slide  tecnologia 
+ // Slide  tecnologia 
 $(document).ready(function(){
     let container = $('.logo-techs');
     let totalWidth = 0;
@@ -19,30 +19,18 @@ $(document).ready(function(){
 
     scrollItems();
 
-    // Auto-scroll every 5 seconds
+    // Auto-scroll every 10 seconds
     setInterval(scrollItems, 10000);
+
+    // Sidebar Menu
+
+    $('.sidebar-btn').click(function() {
+        $('nav').toggleClass('active')
+        $('.sidebar-btn').toggleClass('toggle')
+    })
+
+    $('.menu li').click(() => {
+        $('nav').removeClass('active')
+        $('.sidebar-btn').removeClass('toggle')
+    })
 });
-
-
-// const form = document.getElementById('form-contact');
-// console.log(form);
-
-// function validateName (fullName) {
-//     const lengthName =  fullName.split(' ');
-//     return lengthName.length >= 2;
-// }
-
-// form.addEventListener('submit', function(e) {
-//     let validateForm = false
-//     e.preventDefault();
-
-//     const name = document.getElementById('full-name');
-//     const messageSuccess = `Obrigado por entrar em contato ${name.value.split(' ')[0]}, em breve retornaremo o contato`
-
-//     validateForm = validateName(name.value)
-//     if (validateForm) {
-//         console.log(messageSuccess)
-//     } else {
-//         alert('name is validate')
-//     }
-// })

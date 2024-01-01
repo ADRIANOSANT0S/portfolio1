@@ -24,8 +24,8 @@ header {
     display: flex;
     align-items: center;
     position: sticky;
-    padding: 40px 0;
-    height: 60px;
+    padding: 30px 0;
+    height: 50px;
     top: 0px;
     z-index: 100;
     background: linear-gradient(180deg, rgb(4, 29, 52) 18%, rgb(2, 33, 65) 66%, rgb(1, 35, 72) 88%, rgb(1, 39, 77) 100%);
@@ -51,17 +51,13 @@ header .container{
 }
 
 header img {
-    height: 50px;
+    height: 40px;
 }
 
 header div, 
 .container div {
     display: flex;
     align-items: center;
-}
-
-#menu-togglo{
-    display: none;
 }
 
 .menu {
@@ -89,6 +85,9 @@ nav a:hover {
     color: var(--brownish-yellow);
 }
 
+header button {
+    display: none;
+}
 .button {
     display: flex;
     justify-content: center;
@@ -645,27 +644,100 @@ footer a {
         width: 100%;
         padding: 0 15px;
     }
-
-    header {
-        margin: 0;
-        padding: 40px 0px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    #menu-togglo {
+    
+    /* Sidebar */
+    header button {
         display: block;
-        background: transparent;
-        border: none;
-        padding: 10px;
     }
 
-    nav,
+    nav {
+        position: fixed;
+        top: 60px;
+        left: -100vw;
+        width: 100vw;
+        height: 100vw;
+        background: radial-gradient( rgb(4, 29, 52) 18%, rgb(2, 33, 65) 66%, rgb(1, 35, 72) 88%, rgb(1, 39, 77) 100%);
+        transition: .5s;
+    }
+
+    .active {
+        left: 0px;
+    }
+
+    .menu{
+        display: inline;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .menu li{
+        padding: 10px 15px;
+        border-bottom: 1px solid #10355a;
+    }
+    
+    .menu a {
+        display: block;
+        width: 100%;
+    }
+    
+    .sidebar-btn {
+        position: absolute;
+        right: 40px;
+        cursor: pointer;
+        border: none;
+    }
+
+    .sidebar-btn span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: var(--green);
+        position: absolute;
+        transition: .3s;
+    }
+
+    .sidebar-btn span:before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 0;
+        width: 100%;
+        padding: 0.1px;
+        height: 3px;
+        background-color: var(--green);
+        transition: .3s;
+    }
+    
+    .sidebar-btn span:after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        padding: 0.1px;
+        height: 3px;
+        background-color: var(--green);
+        transition: .3s;
+    }
+
+    .sidebar-btn.toggle span {
+        background: transparent;
+    }
+
+    .sidebar-btn.toggle span::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+    .sidebar-btn.toggle span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
     header .button {
         display: none;
-    } 
-    
+    }
+
     main {
         margin-top: 30px;
     }
@@ -673,7 +745,7 @@ footer a {
     #home span,
     h1,
     .my-information span, h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     #home p,
@@ -700,24 +772,20 @@ footer a {
     
     .network .social {
         align-items: flex-start;
-        margin-left: -70px;
+        width: 100%;
     }
     
     #about-me .container {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0 10px;
+        padding: 0 15px;
     }
     
     .my-information {
         padding: 0px;
     }
     
-    /* #projects .container {
-        padding: 0 10px;
-    } */
-
     #projects .container {
         padding: 0 15px;
     }
